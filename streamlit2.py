@@ -9,7 +9,8 @@ st.write(st.secrets)
 
 # OpenWeather function
 def get_weather_data(location):
-    api_key = st.secrets["api_keys"]["openweather"]  # Secure API key
+    #api_key = st.secrets["api_keys"]["openweather"]  # Secure API key
+    api_key = '9311f6a18572d18e580c0f9885106d74'
     url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
     response = requests.get(url)
     data = response.json()
